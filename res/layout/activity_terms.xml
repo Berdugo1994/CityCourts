@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="12">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="5dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/btnCloseTOU"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@drawable/reg_centre_button"
+            android:text="@string/close"
+            android:onClick="CloseClicked"
+            android:textColor="@color/whiteTextColor" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:padding="5dp">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_license"/>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

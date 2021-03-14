@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollFeed"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mycitycourts.RegisterActivity"
+    android:background="@drawable/reg_centre_background"
+    android:focusableInTouchMode="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/personalDetailsCard"
+        style="@style/centreLocatorCardDesign"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="50dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusableInTouchMode="false"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputFir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_reg_username"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/name"
+                    android:singleLine="true"
+                    />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="2">-->
+<!--                    <EditText-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:hint="@string/first_name"-->
+<!--                        android:id="@+id/et_FirstName"-->
+<!--                        android:autofillHints="@string/first_name"-->
+<!--                        style="@style/modifiedEditText"-->
+<!--                        />-->
+
+<!--                    <EditText-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:id="@+id/et_LastName"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:hint="@string/last_name"-->
+<!--                        android:layout_width="0dip"-->
+<!--                        android:autofillHints="@string/last_name"-->
+<!--                        style="@style/modifiedEditText"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_reg_password"
+                    style="@style/modifiedEditText"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_reg_email"
+                    style="@style/modifiedEditText"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_BirthDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+<!--                <EditText-->
+<!--                    android:id="@+id/et_reg_birthdate"-->
+<!--                    style="@style/modifiedEditText"-->
+<!--                    android:hint="@string/birth_date"-->
+<!--                    android:inputType="date" />-->
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/et_reg_birthdate"
+                    style="@style/modifiedEditText"
+                    android:focusableInTouchMode="false"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:hint="@string/birthdate"
+                    android:focusable="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_reg_mob"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/mobno"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I Agree To "
+                    />
+                <TextView
+                    android:id="@+id/tv_Terms"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms Of Use"
+                    android:onClick="TermsOfUse"
+                    android:textColor="#0D93C2"
+                    android:textSize="16sp"
+                    />
+                <CheckBox
+                    android:layout_gravity="center"
+                    android:id="@+id/cb_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="30dp"
+                    android:onClick="CbChecked"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:padding="5dp">
+                    <Button
+                        android:id="@+id/btnSend"
+                        android:layout_width="match_parent"
+                        android:maxWidth="100dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/reg_centre_button"
+                        android:text="@string/send"
+                        android:onClick="SignUp"
+                        android:textColor="@color/whiteTextColor"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.core.widget.NestedScrollView>
